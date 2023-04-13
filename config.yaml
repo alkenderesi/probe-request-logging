@@ -1,0 +1,17 @@
+# MAC address of the interface for sniffing packets in monitor mode
+interface_mac: "xx:xx:xx:xx:xx:xx"
+
+# GPIO pin number (BCM format) for the graceful shutdown functionality
+gpio_pin: 17
+
+# Frequency to check the GPIO pin state (seconds)
+gpio_check_frequency: 3.0
+
+# Ignore probe requests without a specified SSID
+ignore_wildcards: false
+
+# Path to the directory where the probe request logs are stored
+probe_request_log_directory: "requests"
+
+# Path to the directory where the error logs are stored
+error_log_directory: "errors"
