@@ -1,5 +1,5 @@
-# probe-request-logger
-Probe Request Logger is a lightweight application for Raspberry Pi devices designed to log nearby wireless probe requests. This can be useful for monitoring Wi-Fi activity and analyzing wireless network traffic in your environment.
+# probe-request-logging
+A lightweight application for Raspberry Pi devices designed to log nearby wireless probe requests. This can be useful for monitoring Wi-Fi activity and analyzing wireless network traffic in your environment.
 
 ## Required Equipment
 
@@ -9,7 +9,7 @@ Probe Request Logger is a lightweight application for Raspberry Pi devices desig
 
 ## Installation
 
-Follow these steps to install Probe Request Logger on your Raspberry Pi as a background service:
+Follow these steps to install Probe Request Logging app on your Raspberry Pi as a background service:
 
 1. Ensure your Raspberry Pi is running Raspberry Pi OS Lite and is connected to the internet.
 
@@ -20,11 +20,11 @@ sudo apt -y upgrade
 ```
 3. Clone the repository:
 ```
-git clone https://github.com/DrKarambit/probe-request-logger.git
+git clone git@github.com:alkenderesi/probe-request-logging.git
 ```
 4. Change to the project directory:
 ```
-cd probe-request-logger
+cd probe-request-logging
 ```
 5. Modify the MAC address in config.yaml to match your USB Wi-Fi adapter.
 
@@ -38,13 +38,13 @@ sudo ./install_service.sh
 ```
 8. Check whether the service is running:
 ```
-sudo systemctl status probe_request_logger.service
+sudo systemctl status probe_request_logging.service
 ```
 
-The script will install the necessary dependencies and configure the Probe Request Logger service to run automatically on startup.
+The script will install the necessary dependencies and configure the Probe Request Logging service to run automatically on startup.
 
 ## Usage
 
-Once the installation is complete, the Probe Request Logger service will start automatically. The service logs probe requests detected by the USB Wi-Fi adapter to a csv file on the Raspberry Pi.
+Once the installation is complete, the Probe Request Logging service will start automatically. The service logs probe requests detected by the USB Wi-Fi adapter to a csv file on the Raspberry Pi.
 
 To control the service, you can use the standard `systemctl` commands. However the recommended way to stop the service is by shorting the GPIO pin specified in config.yaml to ground, which allows users to stop the service even without a display output or an input device.

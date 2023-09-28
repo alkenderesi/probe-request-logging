@@ -1,9 +1,9 @@
 #!/bin/bash
 
 
-SERVICE_NAME="Probe Request Logger"
-SERVICE_FILE="probe_request_logger.service"
-PYTHON_SCRIPT="probe_request_logger.py"
+SERVICE_NAME="Probe Request Logging"
+SERVICE_FILE="probe_request_logging.service"
+PYTHON_SCRIPT="probe_request_logging.py"
 REQUIREMENTS_TXT="requirements.txt"
 
 echo "Starting $SERVICE_NAME installation..."
